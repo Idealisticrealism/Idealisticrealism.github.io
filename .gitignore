@@ -1,0 +1,12 @@
+# Hugo 的构建输出
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# 临时文件
+*.tmp
+*.temp
+
+# 系统文件
+.DS_Store
+Thumbs.db

@@ -1,0 +1,66 @@
+baseURL = 'https://Idealisticrealism.github.io/'
+languageCode = 'zh-cn'  # 改为中文
+title = '理想的现实主义的学术网站'    # 您的网站标题
+theme = 'typo'
+
+[taxonomies]
+  tag = 'tags'
+
+[params]
+math = true        # 启用数学公式支持
+  # 网站描述
+  description = "我的物理学研究笔记与讲义"
+  
+  # 首页介绍部分 - 这是显示在首页顶部的个人介绍
+  homeIntroTitle = '你好！'
+  homeIntroContent = """
+  我是理想的现实主义，目前是一名武汉大学物理系本科生，这个网站分享我的学习笔记、课程讲义（也许未来会有？）和学术思考。
+  物理数学化学啥都看一点点哈哈哈。
+  """
+  
+  # 首页文章列表设置 - 这里指定显示哪个栏目的文章
+  homeCollectionTitle = '最新文章'
+  homeCollection = 'posts'  # 这对应您创建的 posts 文件夹
+  
+  # 列表显示设置
+  paginationSize = 10
+  listSummaries = true
+  listDateFormat = '2006年1月2日'
+  
+  # 面包屑导航
+  [params.breadcrumbs]
+    enabled = true
+    showCurrentPage = true
+    home = "首页"
+  
+  # 社交链接（按需配置）
+  [[params.social]]
+    name = "知乎"
+    url = "https://www.zhihu.com/people/archer-29-65-53"
+  
+  
+  [[params.menu]]
+  name = "资源下载"
+  url = "/downloads/"
+  weight = 4
+  
+  # 主导航菜单
+  [[params.menu]]
+    name = "首页"
+    url = "/"
+  
+  [[params.menu]]
+    name = "文章"
+    url = "/posts/"
+  
+  [[params.menu]]
+    name = "关于"
+    url = "/about/"
+
+# 语法高亮
+[markup]
+  [markup.highlight]
+    style = 'algol'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许渲染数学公式
